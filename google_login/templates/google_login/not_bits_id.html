@@ -1,0 +1,22 @@
+{% load account %}
+{% load socialaccount %}
+{% providers_media_js %}
+{% user_display user as user_display %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Logged Out</title>
+</head>
+<body>
+
+<h2 align="center">{{ user.first_name.capitalize }} {{ user.last_name.capitalize }} has been logged out... <br><br><br></h2>
+<h3 align="center">Please login through BITS email ID only</h3>
+
+<div>
+	<p align="center">
+		<a href=" {% provider_login_url 'google' %} "><button style="height:30px;width:120px">Log In Again</button></a>
+	</p>
+</div>
+
+</body>
+</html>

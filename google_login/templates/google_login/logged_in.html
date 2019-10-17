@@ -1,0 +1,22 @@
+{% load account %}
+
+{% user_display user as user_display %}
+<html>
+<head>
+	<title>Logged In</title>
+</head>
+<body>
+
+<h1 align="center">You have logged in...</h1>
+<p align="center">
+	<br>
+	<img height="250" width="230" src="{{ user.socialaccount_set.all.0.get_avatar_url }}" />
+	<br>
+	<h3 align="center">{{ user.first_name.capitalize }} {{ user.last_name.capitalize }}</h3>
+	<a href="{% url 'drive-home' %}">
+		<h4 align="center">Continue to Drive</h4>
+	</a>
+</p>
+
+</body>
+</html>

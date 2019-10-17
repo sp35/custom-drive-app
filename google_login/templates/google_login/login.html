@@ -1,0 +1,17 @@
+{% load socialaccount %}
+{% providers_media_js %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drive Site</title>
+</head>
+<body>
+
+<div>
+	<p align="center">
+		<a href=" {% provider_login_url 'google' %} "><button style="height:50px;width:150px"><font face="times, serif" size="5">Log In</font></button></a>
+	</p>
+</div>
+
+</body>
+</html>
