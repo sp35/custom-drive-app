@@ -28,7 +28,7 @@ def login_success(request):
 				print(response.body)
 				print(response.headers)
 			except Exception as e:
-				print(e.message)
+				print(str(e))
 
 			return render(request, 'google_login/logged_in.html')
 
